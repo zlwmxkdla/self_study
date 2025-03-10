@@ -11,45 +11,21 @@
             border-radius: 50px;
             border: 2px solid black;
         }
-        .container{
-            display: flex;
-            <!-- width: 100%; -->
-        }
-        #header{
-            margin: 0 auto;
-            text-align: center;
-            background-color: skyblue;
-            border-radius: 50%;
-        }
-        input[type="button"]{
-            border-radius: 50%;
-            border:2px solid black;
-        }
-        #before{
-            width: 20%;
-        }
-        #next{
-            width:20%;
-        }
-        #check{
-            width: 60%;
-        }
+        
     </style>
 </head>
 <body>
-    <div id="board" >
-        <!-- <header><h1>웹 개발 미니 프로젝트</h1></header> -->
-        <div id="header"><h1>웹 개발 미니 프로젝트</h1></div>
+    <div class="quiz_container" >
+        <div id="quiz_header"><h1>웹 개발 미니 프로젝트</h1></div>
         <br>
-        <div>
-            <table>
-                <tr class="container">
-                    <td id="before"><input type="button" value="이전 문제"></td>
-                    <td id="next"><input type="button" value="다음 문제"></td>
-                    <td id="check"><input type="button" value="정답 확인"></td>
-                </tr>
-            </table>
+        <div id="quiz">
+            <div class="button-container">
+                <button id="prev" class="navigation-btn">이전 문제</button>
+                <button id="next" class="navigation-btn">다음 문제</button>
+                <button id="check" class="check_answer">정답 확인</button>
+            </div>
         </div>
+        
     </div>
 </body>
 </html>
