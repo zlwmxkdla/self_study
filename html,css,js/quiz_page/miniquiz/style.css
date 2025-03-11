@@ -1,187 +1,96 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'DungGeunMo';
 }
 
 body {
-  background-color: #f5f5f5;
+  background-image: url(background-img.avif);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.quiz-container {
-  background-color: white;
+#background {
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#startBtn {
+  padding: 20px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 5%;
+  right: 35%;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  padding: 25px 62px;
+}
+
+#mainTitle {
+  font-size: 14px;
+}
+
+#box {
+  background: rgb(256, 256, 256, 0.8);
+  width: 700px;
+  height: 300px;
+  border-radius: 15px;
+  padding: 20px;
   overflow: hidden;
 }
 
-#quiz-header {
-  background-color: #4257b2;
-  color: white;
+#nav {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background: rgb(256, 256, 256, 0.8);
   padding: 20px;
+  border-radius: 15px;
+}
+
+#problem_btn_number {
+  font-size: 20px;
+  padding: 8px;
+  background: white;
   text-align: center;
+  border-radius: 10px;
 }
 
-#quiz-header h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-#quiz {
-  padding: 30px;
-}
-
-#question {
-  font-size: 18px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.options-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.option {
-  background-color: #f1f1f1;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  padding: 12px 15px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.option:hover {
-  background-color: #e5e5e5;
-}
-
-.option.selected {
-  background-color: #d3e4ff;
-  border-color: #4257b2;
-}
-
-.option.correct {
-  background-color: #c8f7c5;
-  border-color: #0a0;
-}
-
-.option.incorrect {
-  background-color: #f7c5c5;
-  border-color: #a00;
-}
-
-#result-message {
-  margin-bottom: 20px;
-  font-weight: 600;
-  height: 24px;
-  text-align: center;
-}
-
-.correct-message {
-  color: #0a0;
-}
-
-.incorrect-message {
-  color: #a00;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.navigation-btn,
-.submit-btn,
-.restart-btn {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-.navigation-btn {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.navigation-btn:hover {
-  background-color: #d0d0d0;
-}
-
-.submit-btn {
-  background-color: #4257b2;
-  color: white;
-  flex-grow: 1;
-}
-
-.submit-btn:hover {
-  background-color: #374998;
-}
-
-.restart-btn {
-  background-color: #3dcaa4;
-  color: white;
-  width: 100%;
-}
-
-.restart-btn:hover {
-  background-color: #33b090;
-}
-
-.hide {
-  display: none;
-}
-
-#results {
-  padding: 30px;
-  text-align: center;
-}
-
-#results h2 {
-  color: #4257b2;
-  margin-bottom: 20px;
-}
-
-#score {
-  font-weight: bold;
-  font-size: 24px;
-  color: #3dcaa4;
-}
-
-#summary {
-  margin: 20px 0;
-  text-align: left;
-}
-
-.summary-item {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.summary-item.correct {
-  border-left: 4px solid #0a0;
-}
-
-.summary-item.incorrect {
-  border-left: 4px solid #a00;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+#problem_btn_number:hover {
+  background: '#B9ED0';
 }
