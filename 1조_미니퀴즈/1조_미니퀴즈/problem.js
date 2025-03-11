@@ -5,9 +5,9 @@ const problemTitle = [
   '4. div 요소의 높이는 몇 필셀인가?',
   '5. 다음 코드의 실행 결과로 옳은 것은?',
   '6. 다음 중 제목과 본문 글자 태그가 아닌 것은?',
-  '7. 다음 중 <h1>제목 글자 태그 1</h1> 부터 <h6>제목 글자 태그 6</h6>까지 생성하는 Emmet 단축 코드는?(VScode기준)',
+  '7. 다음 중 &lt;h1&gt;제목 글자 태그 1&lt;/h1&gt; 부터 &lt;h6&gt;제목 글자 태그 6&lt;/h6&gt;까지 생성하는 Emmet 단축 코드는?(VScode기준)',
   '8. HTML 목록을 만들 때 내용이 틀린 태그는?',
-  '9. 다음 중 <audio> 태그와 <video> 태그 내부에 넣어, 웹 브라우저가 재생할 수 있는 파일 확장자 관련 문제를 해결할 때 사용하는 태그는?',
+  '9. 다음 중 &lt;audio&gt; 태그와 &lt;video&gt; 태그 내부에 넣어, 웹 브라우저가 재생할 수 있는 파일 확장자 관련 문제를 해결할 때 사용하는 태그는?',
   '10. 다음 중 HTTP 상태 코드가 올바른 것은?',
 ];
 
@@ -178,3 +178,5 @@ function handleProblemNumber(problem_number) {
   const title = document.getElementById('problemTitle');
   title.innerHTML = problemTitle[number];
 }
+
+
