@@ -84,7 +84,7 @@ const quizData = [
 ];
 
 // 변수 초기화
-let currentQuestion = 0;
+let currentQuestion = 0; //현재 문제가 몇 번인지
 let score = 0;
 let userAnswers = new Array(quizData.length).fill(-1);
 let quizCompleted = false;
@@ -120,5 +120,19 @@ function initQuiz() {
 }
 
 function loadQuestion(){
-  questionElement.textContent=
+  questionElement.textContent=quizData[currentQuestion++];
+  optionsContainer.innerHTML = '';
+
+  currentQuizData.options.forEach((option, index) => {
+    const optionElement = document.createElement('div');
+    optionElement.className = 'option';
+    if (userAnswers[currentQuestion] === index) {
+      optionElement.classList.add('selected');
+    }
+    optionElement.textContent = option;
+    optionElement.dataset.index = index;
+
+    optionElement.addEventListener('click', selectOption);
+    optionsContainer.appendChild(optionElement);
+  }
 }
